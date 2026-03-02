@@ -12,7 +12,7 @@ public class JDBC_Connection3 {
 
 		try(Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/employee","root","Keshav@123");
 
-				PreparedStatement st=con.prepareStatement("select * from employee;");)
+				PreparedStatement st=con.prepareStatement("select * from employee where E_id=1;");)
 						
 		{
 			boolean flag=st.execute();
