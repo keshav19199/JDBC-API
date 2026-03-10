@@ -12,7 +12,7 @@ public class JDBC_Connection3 {
 
 		try(Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/employee","root","Keshav@123");
 
-				PreparedStatement st=con.prepareStatement("select * from employee where E_id=1;");)
+				PreparedStatement st=con.prepareStatement("insert into employee values(121,'kk','ss@gmail.com')");)
 						
 		{
 			boolean flag=st.execute();
@@ -32,6 +32,7 @@ public class JDBC_Connection3 {
 			}
 			else
 			{
+				System.out.println("DML");
 				int row =st.getUpdateCount();
 				
 				System.out.println("Rows affected: "+row);
